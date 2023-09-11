@@ -12,7 +12,7 @@
         <td><%= image_tag user.get_profile_image, size: '50x50' %></td>
         <td><%= user.name %></td>
         <% if current_user != user %>
-        <td><%= render partial: "relationships/follow_btn", locals: { user: current_user } %></td>
+          <td><%= render partial: "relationships/follow_btn", locals: { user: user } %></td>
         <% end %>
         <td><%= link_to 'Show', user %></td>
       </tr>
